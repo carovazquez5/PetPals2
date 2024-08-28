@@ -22,6 +22,10 @@ p {
     color: grey
 }
 
+nav a:hover {
+    color: white; 
+}
+
 .logopetpal {
     display: flex;
     justify-content: center;
@@ -63,7 +67,7 @@ p {
 
 .menu .right button {
     background-color: rgb(247, 199, 137);
-    color: orange;
+    color: rgb(0, 0, 0);
     border: none;
     padding: 10px 20px;
     margin-left: 10px;
@@ -120,6 +124,15 @@ p {
 .container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+}
+
+.container .card {
+    background-color: white; 
+    transition: background-color 0.3s ease; 
+}
+
+.container .card:hover {
+    background-color: rgb(248, 227, 189); 
 }
 
 .card {
@@ -280,6 +293,7 @@ footer {
     width: 100%;
 }
 
+
 form div {
     margin-bottom: 15px;
 }
@@ -313,6 +327,10 @@ button:hover {
     background-color: #ffcc66;
 }
 
+.fomucontacto form div:last-child {
+    text-align: center; /* Centrar el contenido del último div */
+}
+
 /*TURNOS*/
 
 .text-container {
@@ -331,6 +349,41 @@ button:hover {
 }
 .actividadreciente {
     text-align: center;
+}
+
+/*emergente TURNOS*/ 
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: #FFFF;
+}
+
+.modal-contenido {
+    background-color: #FFFF;
+    margin: 15 auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+}
+
+.cerrar {
+    color: #aaa;
+    float: right;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.cerrar:hover, 
+.cerrar:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
 }
 
 
@@ -387,12 +440,13 @@ button {
 
 /*FORMULARIO INICIO SESION*/
 
-#Fomrulario{
+#Formulario{
     width: 300px;
-    height: 200px;
     margin: auto;
     padding: 15px;
+    text-align: center;
 }
+
 label{
     width: 200px;
     display: inline-block;

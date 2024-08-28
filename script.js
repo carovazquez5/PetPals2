@@ -3,6 +3,7 @@ function validarFomrulario(){
     var contraseñaUsuario = document.getElementById("Contraseña").value;
     var formulario = document.getElementById("Fomrulario");
     var validador = true;
+    contraseñaUsuario.length
     if (nombreUsuario.length>1) {
         console.log("Nombre correcto");
         document.getElementById("errorNombre").style="visibility:hidden";
@@ -13,5 +14,22 @@ function validarFomrulario(){
     if (validador==true) {
         formulario.submit();
     }
+}
 
+
+/*tarjeta emergente*/
+
+var modal = document.getElementById ("miModal");
+var btn = document.getElementById ("abirModal");
+var span = document.getElementsByClassName ("cerrar") [0];
+btn.onclick = function() {
+    modal.style.display = "block";
+}
+span.onclick = function() {
+    modal.style.display = "none";
+}
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
 }
