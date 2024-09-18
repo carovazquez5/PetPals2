@@ -12,7 +12,7 @@
     <title> Petpals</title>
     <link rel="stylesheet" href="styles.css">
     <script src="script.js"></script>
-    <title>Iniciar Sesion</title>
+    <title>Contacto</title>
 </head>
 
 <body>
@@ -31,50 +31,52 @@
             <li><a href="index.html">Inicio</a></li>
             <li><a href="servicios.html">Servicios</a></li>
             <li><a href="turnos.html">Turnos</a></li>
-            <li><a href="contacto.html">Contacto</a></li>
+            <li><a href="#">Contacto</a></li>
         </ul>
     
         <div class="navbar-right">
-            <a href="#"><button class="btn"><b>Entrar</b></button></a>
+            <a href="iniciosesion.html"><button class="btn"><b>Entrar</b></button></a>
             <a href="registrarse.html"><button class="btn"><b>Registrarse</b></button></a>
         </div>
     </nav>
     
 
-    <br>
-    <br>
 
 
-    <header> 
-        <div class="spacer"></div>
-            <div class="centrado">
-                <h1>¡Bienvenido de nuevo!</h1>
-                <p>Llene los espacios requeridos con su información personal.</p>
+
+
+
+    <div class="texto-contacto">
+        <h2> Contáctanos</h2>
+        <p>Aqui debajo puedes dejar una opinion, sugerencia o contactarte directamente con nosotros.</p>
+    </div>
+    
+    <div class="fomucontacto">
+        <form action="" method="post">
+            <div>
+                <label for="nombre"><b>Nombre:</b></label>
+                <input type="text" id="nombre" name="nombre" placeholder="Ingrese su nombre" required>
             </div>
-        </header>
+            <div>
+                <label for="email"><b>Email:</b></label>
+                <input type="email" id="email" name="email" placeholder="Ingrese su correo electronico" required>
+            </div>
+            <div>
+                <label for="mensaje"><b>Mensaje:</b></label>
+                <input type="text" textarea id="mensaje" name="mensaje" minlength="10" maxlength="150" placeholder="Escriba su mensaje aqui" required></textarea>
+            </div>
+            <div>
+                <label for="telefono"><b>Teléfono Móvil:</b></label>
+                <input type="text" input type="tel" id="telefono" name="telefono"  value="+54 911" placeholder="Ingrese su telefono">
+            </div>
+            <div>
+                <button type="submit" class="boton-contacto"><b>Enviar</b></button>
+            </div>
+        </form>
+    </div>
 
 
 
-
-        
-        <div class="formuiniciosesion">
-            <form id="loginForm" action="index.html" method="post">
-                <div class="grupo-login-unico">
-                    <label for="usuario">Usuario:</label>
-                    <input type="text" id="usuario" name="usuario" placeholder="Ingrese su usuario" required minlength="5">
-                </div>
-                <div class="grupo-login-unico">
-                    <label for="contrasena">Contraseña:</label>
-                    <input type="password" id="contrasena" name="contrasena" placeholder="Ingrese su contraseña" required minlength="5">
-                </div>
-                <div class="grupo-login-unico">
-                    <button type="submit" class="btn-login-unico">Entrar</button>
-                </div>
-                <div class="grupo-login-unico">
-                    <a href="#">¿Olvidaste tu contraseña?</a>
-                </div>
-            </form>
-        </div>
 
         <footer>
             <div class="footer-box">

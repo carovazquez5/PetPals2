@@ -10,39 +10,69 @@
     <meta name="author" content="Carolina Vazquez">
     <meta name="publisher" content="PetPals">
     <title> Petpals</title>
-    <link rel="stylesheet" href="styles.css"> <script src="script.js"></script>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js"></script>
     <title>Turnos</title>
 </head>
+
 <body>
-    <nav>
-        <div class="menu">
-            <div class="left">
-                <img src="img/search-regular-24.png" alt="Lupa">
-                <a href="index.html">Inicio</a>
-                <a href="servicios.html">Servicios</a>
-                <a href="#">Turnos</a>
-                <a href="contactanos.html">Contáctanos</a>
-            </div>
-            
-            <div class="right">
-                <a href="iniciosesion.html"><button> <b>Entrar</b> </button></a>
-                <a href="registrarse.html"><button> <b>Registrarse</b> </button></a>
-            </div>
+    <nav class="navbar">
+        <div class="navbar-left">
+            <img src="./img/search-regular-24.png" alt="Buscar" class="lupa-icon">
+        </div>
+        
+        <button class="navbar-toggle" aria-label="Abrir menú">
+            <span class="navbar-toggle-icon"></span>
+            <span class="navbar-toggle-icon"></span>
+            <span class="navbar-toggle-icon"></span>
+        </button>
+    
+        <ul class="navbar-center">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="servicios.html">Servicios</a></li>
+            <li><a href="#">Turnos</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+    
+        <div class="navbar-right">
+            <a href="iniciosesion.html"><button class="btn"><b>Entrar</b></button></a>
+            <a href="registrarse.html"><button class="btn"><b>Registrarse</b></button></a>
         </div>
     </nav>
+    
+
+    <br>
+    <br>
 
 
+    <div class="nuestroservicios"> 
+        <h2> Turnos </h2>
+    </div>
+    <p><b><u><a href="#" id="abrirTurnoModal">Click aquí para sacar turno</a></u></b></p>
 
- <br>
- <br>
- <br>
- <br>
- <br>
- <br>
- 
 
-    <h2> Turnos </h2>
-    <p>  <b> <u>Click aqui para sacar turno</u></b></p>
+    <div id="turnoNuevoModal" class="modal-turno">
+        <div class="modal-turno-contenido">
+            <span class="cerrar-turno">&times;</span> 
+            <h2>Solicitar Turno</h2>
+            <form id="nuevoTurnoForm">
+                <div>
+                    <label for="nuevo-dia">Día:</label>
+                    <input type="date" id="nuevo-dia" name="nuevo-dia" required>
+                </div>
+                <div>
+                    <label for="nuevo-hora">Hora:</label>
+                    <input type="time" id="nuevo-hora" name="nuevo-hora" required>
+                </div>
+                <div>
+                    <label for="nuevo-localidad">Localidad:</label>
+                    <input type="text" id="nuevo-localidad" name="nuevo-localidad" placeholder="Ingrese la localidad" required>
+                </div>
+                <button type="submit" class="btn-turno">Solicitar Turno</button>
+            </form>
+        </div>
+    </div>
+    
     <div class="text-container">
         <span class="text-left"> <b>Turno para el 17/05/2024</b></span>
         <span class="spacer"></span>
@@ -50,39 +80,32 @@
     </div>
 
 
-    <h1> Haz click aqui para ver ventana</h1>
-    <p id="abrirModal" style="color: blue; cursor: pointer;">CLICK</p>
-    <div id="miModal" class="modal">
-        <div class="modal-contenido">
-            <span class="cerrar">&times;</span>
-            <h2>omg lol</h2>
-            <p>mi mimimimi</p>
-        </div>
-    </div>
-    
+    <br>
+    <br>
 
-<br> 
-<br>
     <div class="text-container">
         <span class="text-left"> Turno para el 10/02/2024</span>
         <span class="spacer"></span>
         <span class="text-right"> Hecho</span>
     </div>
 
+
+
+
     <div class="actividadreciente">
         <p> No hay mas actividad reciente.</p>
     </div>
     
-    <footer>
-        <div class="footer-box">
-            <img src="img/Mesa de trabajo 1_5@3x.png" alt="logochiquito">        
-        </div> 
 
-            <p>Copyright © 2024. Todos los derechos reservados.</p> 
-            <p>¿Necesitas ayuda? Podes contactarnos al +54 9 11 5643 8643</p> <br>
-            <p> <u>Términos y condiciones</u></p>
-            <p> <u>Politicas y privacidad</u></p>
-    </footer>
-
+        <footer>
+            <div class="footer-box">
+                <img src="img/Mesa de trabajo 1_5@3x.png" alt="logochiquito">        
+            </div> 
+    
+                <p>Copyright © 2024. Todos los derechos reservados.</p> 
+                <p>¿Necesitas ayuda? Podes contactarnos al +54 9 11 5643 8643</p> <br>
+                <p> <u>Términos y condiciones</u></p>
+                <p> <u>Politicas y privacidad</u></p>
+        </footer>
 </body>
 </html>

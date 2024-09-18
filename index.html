@@ -11,53 +11,69 @@
     <meta name="publisher" content="PetPals">
     <title> Petpals</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="script.js"></script>
     <title>PetPals</title>
 </head>
 
-
 <body>
-    <nav>
-        <div class="menu">
-            <div class="left">
-                <img src="img/search-regular-24.png" alt="Lupa">
-                <a href="#">Inicio</a>
-                <a href="servicios.html">Servicios</a>
-                <a href="turnos.html">Turnos</a>
-                <a href="contactanos.html">Contáctanos</a>
-            </div>
+    <nav class="navbar">
+        <div class="navbar-left">
+            <img src="./img/search-regular-24.png" alt="Buscar" class="lupa-icon">
+        </div>
 
-            <div class="right">
-                <a href="iniciosesion.html"><button> <b>Entrar</b> </button></a>
-                <a href="registrarse.html"><button> <b>Registrarse</b> </button></a>
-            </div>
-
+        
+        <button class="navbar-toggle" aria-label="Abrir menú">
+            <span class="navbar-toggle-icon"></span>
+            <span class="navbar-toggle-icon"></span>
+            <span class="navbar-toggle-icon"></span>
+        </button>
+    
+        <ul class="navbar-center">
+            <li><a href="#">Inicio</a></li>
+            <li><a href="servicios.html">Servicios</a></li>
+            <li><a href="turnos.html">Turnos</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+    
+        <div class="navbar-right">
+            <a href="iniciosesion.html"><button class="btn"><b>Entrar</b></button></a>
+            <a href="registrarse.html"><button class="btn"><b>Registrarse</b></button></a>
         </div>
     </nav>
+    
 
     <header> 
-        <div class="spacer"></div>
-
-        <div class="content">
-            <div class="logopetpal">
-                <img src="img/Mesa de trabajo 1_5@3x.png" alt="LogoPetPal">   
+        <div class="logopetpaaals"></div>
+            <div class="content">
+                <div class="logopetpal">
+                    <img src="img/Mesa de trabajo 1_5@3x.png" alt="LogoPetPal">   
+                </div>
             </div>
-        </div>
-
-            
+   
          <div class="petpalnombre"> 
-            <p> <b>PetPals</b></p>
+            <h1> <b>PetPals</b></h1>
          </div>
 
         <div class="centrado">
-            <p>Un lugar seguro para tu mascota.</p> <br> <br> <br> <br>
+            <h3>Un lugar seguro para tu mascota.</h3> <br> <br> <br> <br>
         </div>
-
     </header>
 
 
-        <br>
-        <br>
 
+    <div id="loaderContainer"> 
+        <div id="loader"></div>
+    </div>
+
+
+
+
+
+
+
+
+    <br>
+    <br>
 
         <div class="nuestroservicios"> 
             <h2> Nuestros servicios </h2>
@@ -72,139 +88,101 @@
 
 
 
-    <div class="container">
-        <div class="card">
-            <img src="img/vet.png" alt="Imagen 1">
 
-            <div class="textcard"> <h3>Veterinaria</h3> </div>
-
-            <p>Los mejores profesionales de la salud animal <br>
-                trabajando para PetPals.</p>
-        </div>
-        <div class="card">
-            <img src="img/aloja.png" alt="Imagen 2">
-
-            <div class="textcard"> <h3>Alojamiento</h3> </div>
-
-            <p>Contamos con las mejores instalaciones <br>
-                ideales para que mascota disfrute la estadia.</p>
-        </div>
-        <div class="card">
-            <img src="img/baño.png" alt="Imagen 3">
-
-            <div class="textcard"> <h3>Baños y estetica</h3> </div>
-
-            <p>¡Haz una cita y descubre por qué somos la <br>
-                elección preferida para el cuidado de tu mascota!</p>
-        </div>
-        <div class="card">
-            <img src="img/adiestra.png" alt="Imagen 4">
-
-            <div class="textcard"> <h3>Adiestramiento</h3> </div>
-
-            <p>Lo entrenamos para que mejore un <br>
-                comportamiento no deseado junto a nuestros <br>
-                profesionales.</p>
-        </div>
-    </div>
-
-
-    <div class="rectangulo">
-        <div class="centrado-texto"> <b>Con más de 10.000 descargas en la App store <br>
-        Somos el sitio por excelencia para el cuidado de tu mascota.</b></div>
-    </div>
-
-   <br> 
-   <br> 
-   <br> 
-   
-    <div class="nuestroservicios"> 
-        <h2> Galeria </h2>
-    </div>
-
-    <div class="nuestroserviciostexto">
-        <p> Nuestros clientes satisfechos.</p> <br> <br> <br> <br>
-    </div>
-
-
+        <div class="container">
+            <div class="card">
+                <img src="img/vet.png" alt="Imagen 1">
     
-<section class="carousel" aria-label="Gallery">
-  <ol class="carousel__viewport">
-    <li id="carousel__slide1"
-        tabindex="0"
-        class="carousel__slide">
-      <div class="carousel__snapper">
-        <a href="#carousel__slide4"
-           class="carousel__prev">Go to last slide</a>
-        <a href="#carousel__slide2"
-           class="carousel__next">Go to next slide</a>
-      </div>
-    </li>
-    <li id="carousel__slide2"
-        tabindex="0"
-        class="carousel__slide">
-      <div class="carousel__snapper"></div>
-      <a href="#carousel__slide1"
-         class="carousel__prev">Go to previous slide</a>
-      <a href="#carousel__slide3"
-         class="carousel__next">Go to next slide</a>
-    </li>
-    <li id="carousel__slide3"
-        tabindex="0"
-        class="carousel__slide">
-      <div class="carousel__snapper"></div>
-      <a href="#carousel__slide2"
-         class="carousel__prev">Go to previous slide</a>
-      <a href="#carousel__slide4"
-         class="carousel__next">Go to next slide</a>
-    </li>
-    <li id="carousel__slide4"
-        tabindex="0"
-        class="carousel__slide">
-      <div class="carousel__snapper"></div>
-      <a href="#carousel__slide3"
-         class="carousel__prev">Go to previous slide</a>
-      <a href="#carousel__slide1"
-         class="carousel__next">Go to first slide</a>
-    </li>
-  </ol>
-  <aside class="carousel__navigation">
-    <ol class="carousel__navigation-list">
-      <li class="carousel__navigation-item">
-        <a href="#carousel__slide1"
-           class="carousel__navigation-button">Go to slide 1</a>
-      </li>
-      <li class="carousel__navigation-item">
-        <a href="#carousel__slide2"
-           class="carousel__navigation-button">Go to slide 2</a>
-      </li>
-      <li class="carousel__navigation-item">
-        <a href="#carousel__slide3"
-           class="carousel__navigation-button">Go to slide 3</a>
-      </li>
-      <li class="carousel__navigation-item">
-        <a href="#carousel__slide4"
-           class="carousel__navigation-button">Go to slide 4</a>
-      </li>
-    </ol>
-  </aside>
-</section>
+                <div class="textcard"> <h3>Veterinaria</h3> </div>
+    
+                <p>Los mejores profesionales de la salud animal <br>
+                    trabajando para PetPals.</p>
+            </div>
+            <div class="card">
+                <img src="img/aloja.png" alt="Imagen 2">
+    
+                <div class="textcard"> <h3>Alojamiento</h3> </div>
+    
+                <p>Contamos con las mejores instalaciones <br>
+                    ideales para que mascota disfrute la estadia.</p>
+            </div>
+            <div class="card">
+                <img src="img/baño.png" alt="Imagen 3">
+    
+                <div class="textcard"> <h3>Baños y estetica</h3> </div>
+    
+                <p>¡Haz una cita y descubre por qué somos la <br>
+                    elección preferida para el cuidado de tu mascota!</p>
+            </div>
+            <div class="card">
+                <img src="img/adiestra.png" alt="Imagen 4">
+    
+                <div class="textcard"> <h3>Adiestramiento</h3> </div>
+    
+                <p>Lo entrenamos para que mejore un <br>
+                    comportamiento no deseado junto a nuestros <br>
+                    profesionales.</p>
+            </div>
+        </div>
+
+
+<br>
+<br>
+<br>
+
+
+        <div class="rectangulo">
+            <div class="centrado-texto"> <b>Con más de 10.000 descargas en la App store <br>
+            Somos el sitio por excelencia para el cuidado de tu mascota.</b></div>
+        </div>
+
+
+
+        <div class="nuestroservicios"> 
+            <h2> Galeria </h2>
+        </div>
+    
+        <div class="nuestroserviciostexto">
+            <p> Algunos de nuestros clientes satisfechos.</p> 
+        </div>
+
+        <div class="galeria">
+            <div class="elemento-galeria">
+                <img src="https://place.dog/300/500" alt="Imagen perrito 1">
+            </div>
+            <div class="elemento-galeria">
+                <img src="https://place.dog/300/500" alt="Imagen perrito 2">
+            </div>
+            <div class="elemento-galeria">
+                <img src="https://place.dog/300/500" alt="Imagen perrito 3">
+            </div>
+            <div class="elemento-galeria">
+                <img src="https://place.dog/300/500" alt="Imagen perrito 4">
+            </div>
+            <div class="elemento-galeria">
+                <img src="https://place.dog/300/500" alt="Imagen perrito 5">
+            </div>
+
+        </div>
     
 
-    <div class="rectangulo2">
-        <span class="centrado-texto2">Podes encontrarnos como <u>@PetPals</u> en todas nuestras redes sociales.</span>
-    </div>
 
-    <footer>
-        <div class="footer-box">
-            <img src="img/Mesa de trabajo 1_5@3x.png" alt="logochiquito">        
-        </div> 
 
-            <p>Copyright © 2024. Todos los derechos reservados.</p> 
-            <p>¿Necesitas ayuda? Podes contactarnos al +54 9 11 5643 8643</p> <br>
-            <p> <u>Términos y condiciones</u></p>
-            <p> <u>Politicas y privacidad</u></p>
-    </footer>
+        <div class="rectangulo2">
+            <span class="centrado-texto2">Podes encontrarnos como <u>@PetPals</u> en todas nuestras redes sociales.</span>
+        </div>
 
+
+
+        <footer>
+            <div class="footer-box">
+                <img src="img/Mesa de trabajo 1_5@3x.png" alt="logochiquito">        
+            </div> 
+    
+                <p>Copyright © 2024. Todos los derechos reservados.</p> 
+                <p>¿Necesitas ayuda? Podes contactarnos al +54 9 11 5643 8643</p> <br>
+                <p> <u>Términos y condiciones</u></p>
+                <p> <u>Politicas y privacidad</u></p>
+        </footer>
 </body>
 </html>
