@@ -9,57 +9,91 @@
     <meta name="robots" content="www.PetPals.com">
     <meta name="author" content="Carolina Vazquez">
     <meta name="publisher" content="PetPals">
-    <title> Iniciar Sesion </title>
+    <title> Petpals</title>
     <link rel="stylesheet" href="styles.css">
     <script src="script.js"></script>
-    <title>PetPals</title>
+    <title>Iniciar Sesion</title>
 </head>
 
 <body>
-    <nav>
-        <div class="menu">
-            <div class="left">
-                <img src="img/search-regular-24.png" alt="Lupa">
-                <a href="index.html">Inicio</a>
-                <a href="servicios.html">Servicios</a>
-                <a href="turnos.html">Turnos</a>
-                <a href="contactanos.html">Contáctanos</a>
-            </div>
-            <div class="right">
-                <button> <a href="#">Entrar</a></button>
-                <button> <a href="registrarse.html">Registrarse</a></button>               
-            </div>
+    <nav class="navbar">
+        <div class="navbar-left">
+            <img src="./img/search-regular-24.png" alt="Buscar" class="lupa-icon">
+        </div>
+        
+        <button class="navbar-toggle" aria-label="Abrir menú">
+            <span class="navbar-toggle-icon"></span>
+            <span class="navbar-toggle-icon"></span>
+            <span class="navbar-toggle-icon"></span>
+        </button>
+    
+        <ul class="navbar-center">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="servicios.html">Servicios</a></li>
+            <li><a href="turnos.html">Turnos</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+    
+        <div class="navbar-right">
+            <a href="#"><button class="btn"><b>Entrar</b></button></a>
+            <a href="registrarse.html"><button class="btn"><b>Registrarse</b></button></a>
+            <button id="bdark">Modo oscuro </button>
         </div>
     </nav>
     
-        <header> 
-            <div class="spacer"></div>
 
-    <div class="centrado">
-                <h1>¡Hola de nuevo!</h1>
-     </div>
-     
-     <form id="Fomrulario">
-        <label for="Usuario">Usuario</label>
-        <input type="text" id="Usuario" name="Usuario">
-        <label id="errorNombre" for="Usuario">Error nombre</label>
-        <label for="Contraseña">Contraseña</label>
-        <input type="password" id="Contraseña" name="Contraseña">
-        <label id="errorContraseña" for="Contraseña">Error contraseña</label>
-        <button type="button" onclick="validarFomrulario()">Enviar</button>
-    </form>
+    <br>
+    <br>
 
-    <footer>
-        <div class="footer-box">
-            <img src="img/Mesa de trabajo 1_5@3x.png" alt="logochiquito">        
-        </div> 
 
-            <p>Copyright © 2024. Todos los derechos reservados.</p> 
-            <p>¿Necesitas ayuda? Podes contactarnos al +54 9 11 5643 8643</p> <br>
-            <p> <u>Términos y condiciones</u></p>
-            <p> <u>Politicas y privacidad</u></p>
-    </footer>
+    <header> 
+        <div class="spacer"></div>
+            <div class="centrado">
+                <h1>¡Bienvenido de nuevo!</h1>
+                <p>Llene los espacios requeridos con su información personal.</p>
+            </div>
+        </header>
 
+
+
+
+        
+        <div class="formuiniciosesion">
+            <form id="loginForm" action="index.html" method="post">
+                <div class="grupo-login-unico">
+                    <label for="usuario">Usuario:</label>
+                    <input type="text" id="usuario" name="usuario" placeholder="Ingrese su usuario" required minlength="5">
+                </div>
+                <div class="grupo-login-unico">
+                    <label for="contrasena">Contraseña:</label>
+                    <input type="password" id="contrasena" name="contrasena" placeholder="Ingrese su contraseña" required minlength="5">
+                </div>
+                <div class="grupo-login-unico">
+                    <button type="submit" class="btn-login-unico">Entrar</button>
+                </div>
+                <div class="grupo-login-unico">
+                    <a href="#">¿Olvidaste tu contraseña?</a>
+                </div>
+            </form>
+        </div>
+
+        <footer>
+            <div class="footer-box">
+                <img src="img/Mesa de trabajo 1_5@3x.png" alt="logochiquito">        
+            </div> 
+    
+                <p>Copyright © 2024. Todos los derechos reservados.</p> 
+                <p>¿Necesitas ayuda? Podes contactarnos al +54 9 11 5643 8643</p> <br>
+                <p> <u>Términos y condiciones</u></p>
+                <p> <u>Politicas y privacidad</u></p>
+        </footer>
+
+        <script>
+            const bdark = document.querySelector ('#bdark'); 
+            const body = document.querySelector ('body');
+            bdark.addEventListener ('click', e =>{
+                body.classList.toggle('darkmode');
+            });          
+        </script>
 </body>
-
 </html>

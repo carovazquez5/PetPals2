@@ -12,7 +12,7 @@
     <title> Petpals</title>
     <link rel="stylesheet" href="styles.css">
     <script src="script.js"></script>
-    <title>Turnos</title>
+    <title>Registrarse</title>
 </head>
 
 <body>
@@ -30,7 +30,7 @@
         <ul class="navbar-center">
             <li><a href="index.html">Inicio</a></li>
             <li><a href="servicios.html">Servicios</a></li>
-            <li><a href="#">Turnos</a></li>
+            <li><a href="turnos.html">Turnos</a></li>
             <li><a href="contacto.html">Contacto</a></li>
         </ul>
     
@@ -46,57 +46,52 @@
     <br>
 
 
-    <div class="nuestroservicios"> 
-        <h2> Turnos </h2>
-    </div>
-    <p><b><u><a href="#" id="abrirTurnoModal">Click aquí para sacar turno</a></u></b></p>
+    <header> 
+        <div class="spacer"></div>
+            <div class="centrado">
+                <h1>¡Bienvenido a PetPals!</h1>
+                <p>Crea una cuenta gratis.</p>
+                <p>Llene los espacios requeridos con su información personal.</p>
+            </div>
+        </header>
 
 
-    <div id="turnoNuevoModal" class="modal-turno">
-        <div class="modal-turno-contenido">
-            <span class="cerrar-turno">&times;</span> 
-            <h2>Solicitar Turno</h2>
-            <form id="nuevoTurnoForm">
-                <div>
-                    <label for="nuevo-dia">Día:</label>
-                    <input type="date" id="nuevo-dia" name="nuevo-dia" required>
+
+        <div class="formu-registro">
+            <form action="index.html" method="post">
+                <div class="grupo-registro-unico">
+                    <label for="nombre-mascota">Nombre de la mascota:</label>
+                    <input type="text" id="nombre-mascota" name="nombre-mascota" placeholder="Ingrese el nombre de la mascota" required>
                 </div>
-                <div>
-                    <label for="nuevo-hora">Hora:</label>
-                    <input type="time" id="nuevo-hora" name="nuevo-hora" required>
+                <div class="grupo-registro-unico">
+                    <label for="especie">Especie:</label>
+                    <select id="especie" name="especie" required>
+                        <option value="">Seleccione una opción</option>
+                        <option value="perro">Perro</option>
+                        <option value="gato">Gato</option>
+                    </select>
                 </div>
-                <div>
-                    <label for="nuevo-localidad">Localidad:</label>
-                    <input type="text" id="nuevo-localidad" name="nuevo-localidad" placeholder="Ingrese la localidad" required>
+                <div class="grupo-registro-unico">
+                    <label for="raza">Raza:</label>
+                    <input type="text" id="raza" name="raza" placeholder="Ingrese la raza de la mascota" required>
                 </div>
-                <button type="submit" class="btn-turno">Solicitar Turno</button>
+                <div class="grupo-registro-unico">
+                    <label for="tamanio">Tamaño:</label>
+                    <select id="especie" name="especie" required>
+                        <option value="">Seleccione una opción</option>
+                        <option value="Pequeño">Pequeño</option>
+                        <option value="Mediano">Mediano</option>
+                        <option value="Grande">Grande</option>
+                    </select>
+                </div>
+                <div class="grupo-registro-unico">
+                    <button type="submit" class="btn-registrar-unico">Registrar</button>
+                </div>
             </form>
         </div>
-    </div>
-    
-    <div class="text-container">
-        <span class="text-left"> <b>Turno para el 17/05/2024</b></span>
-        <span class="spacer"></span>
-        <span class="text-right"> <b>En proceso</b></span>
-    </div>
+        
+        
 
-
-    <br>
-    <br>
-
-    <div class="text-container">
-        <span class="text-left"> Turno para el 10/02/2024</span>
-        <span class="spacer"></span>
-        <span class="text-right"> Hecho</span>
-    </div>
-
-
-
-
-    <div class="actividadreciente">
-        <p> No hay mas actividad reciente.</p>
-    </div>
-    
 
         <footer>
             <div class="footer-box">

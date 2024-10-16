@@ -12,7 +12,7 @@
     <title> Petpals</title>
     <link rel="stylesheet" href="styles.css">
     <script src="script.js"></script>
-    <title>Turnos</title>
+    <title>Contacto</title>
 </head>
 
 <body>
@@ -30,8 +30,8 @@
         <ul class="navbar-center">
             <li><a href="index.html">Inicio</a></li>
             <li><a href="servicios.html">Servicios</a></li>
-            <li><a href="#">Turnos</a></li>
-            <li><a href="contacto.html">Contacto</a></li>
+            <li><a href="turnos.html">Turnos</a></li>
+            <li><a href="#">Contacto</a></li>
         </ul>
     
         <div class="navbar-right">
@@ -42,61 +42,42 @@
     </nav>
     
 
-    <br>
-    <br>
 
 
-    <div class="nuestroservicios"> 
-        <h2> Turnos </h2>
-    </div>
-    <p><b><u><a href="#" id="abrirTurnoModal">Click aquí para sacar turno</a></u></b></p>
 
 
-    <div id="turnoNuevoModal" class="modal-turno">
-        <div class="modal-turno-contenido">
-            <span class="cerrar-turno">&times;</span> 
-            <h2>Solicitar Turno</h2>
-            <form id="nuevoTurnoForm">
-                <div>
-                    <label for="nuevo-dia">Día:</label>
-                    <input type="date" id="nuevo-dia" name="nuevo-dia" required>
-                </div>
-                <div>
-                    <label for="nuevo-hora">Hora:</label>
-                    <input type="time" id="nuevo-hora" name="nuevo-hora" required>
-                </div>
-                <div>
-                    <label for="nuevo-localidad">Localidad:</label>
-                    <input type="text" id="nuevo-localidad" name="nuevo-localidad" placeholder="Ingrese la localidad" required>
-                </div>
-                <button type="submit" class="btn-turno">Solicitar Turno</button>
-            </form>
-        </div>
+
+    <div class="texto-contacto">
+        <h2> Contáctanos</h2>
+        <p>Aqui debajo puedes dejar una opinion, sugerencia o contactarte directamente con nosotros.</p>
     </div>
     
-    <div class="text-container">
-        <span class="text-left"> <b>Turno para el 17/05/2024</b></span>
-        <span class="spacer"></span>
-        <span class="text-right"> <b>En proceso</b></span>
+    <div class="fomucontacto">
+        <form action="" method="post">
+            <div>
+                <label for="nombre"><b>Nombre:</b></label>
+                <input type="text" id="nombre" name="nombre" placeholder="Ingrese su nombre" required>
+            </div>
+            <div>
+                <label for="email"><b>Email:</b></label>
+                <input type="email" id="email" name="email" placeholder="Ingrese su correo electronico" required>
+            </div>
+            <div>
+                <label for="mensaje"><b>Mensaje:</b></label>
+                <input type="text" textarea id="mensaje" name="mensaje" minlength="10" maxlength="150" placeholder="Escriba su mensaje aqui" required></textarea>
+            </div>
+            <div>
+                <label for="telefono"><b>Teléfono Móvil:</b></label>
+                <input type="text" input type="tel" id="telefono" name="telefono"  value="+54 911" placeholder="Ingrese su telefono">
+            </div>
+            <div>
+                <button type="submit" class="boton-contacto"><b>Enviar</b></button>
+            </div>
+        </form>
     </div>
 
 
-    <br>
-    <br>
 
-    <div class="text-container">
-        <span class="text-left"> Turno para el 10/02/2024</span>
-        <span class="spacer"></span>
-        <span class="text-right"> Hecho</span>
-    </div>
-
-
-
-
-    <div class="actividadreciente">
-        <p> No hay mas actividad reciente.</p>
-    </div>
-    
 
         <footer>
             <div class="footer-box">

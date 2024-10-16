@@ -1,10 +1,12 @@
+/*General*/
 body {
     margin: 0;
+    padding: 0;
     font-family: Arial, sans-serif;
+    background-color: antiquewhite;
 }
 
 h1 {
-    text-align: center;
     font-size: 60px;
     color: #FF8514;
 }
@@ -15,6 +17,7 @@ h2 {
 }
 
 h3 {
+    font-size: 20px;
     color: #FF8514;
 }
 
@@ -22,82 +25,191 @@ p {
     color: grey
 }
 
-.logopetpal {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    margin-bottom: 20px;
-}
 
-.menu {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    background-color: rgb(255, 166, 0);
+
+
+
+
+
+
+/* Estilos para el navbar */
+.navbar {
+    background-color: #FF8514;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 10px 20px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.menu a {
-    color: rgb(0, 0, 0);
-    text-decoration: none;
-    margin: 0 15px;
-    font-weight: bold;
-}
-
-.menu img {
-    height: 20px;
-    margin-right: 10px;
-    vertical-align: middle;
-}
-
-.menu .left,
-.menu .right {
+.navbar-left {
     display: flex;
     align-items: center;
 }
 
-.menu .right button {
-    background-color: rgb(247, 199, 137);
-    color: orange;
-    border: none;
-    padding: 10px 20px;
-    margin-left: 10px;
-    cursor: pointer;
-    border-radius: 5px;
+.lupa-icon {
+    width: 24px;
+    height: 24px;
 }
 
-.menu .right button:hover {
+/* Estilos del menú */
+.navbar-center {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-grow: 1;
+    justify-content: center;
+}
+
+.navbar-center li {
+    margin-right: 20px;
+}
+
+.navbar-center li a {
+    color: black;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 10px 15px;
+    display: block;
+    position: relative;
+    transition: color 0.3s ease-in-out;
+}
+
+.navbar-center li a:hover {
+    color: white;
+}
+
+.navbar-center li a::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color: white;
+    left: 0;
+    bottom: 0;
+    transition: width 0.3s ease-in-out;
+}
+
+.navbar-center li a:hover::after {
+    width: 100%;
+}
+
+
+
+.navbar-right {
+    display: flex;
+    gap: 10px;
+}
+
+.btn {
+    background-color: rgb(247, 199, 137);
+    border: none;
+    padding: 10px 15px;
+    font-size: 16px;
+    color: #333;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.btn:hover {
     background-color: #ffcc66;
 }
 
-.spacer {
-    height: 60px; /* Altura del menú ithink */
+
+
+/*TEMA OSCURO*/
+body.darkmode{
+    background-color: #333;
+    color: wheat;
+}
+
+
+/* Estilos para el botón hamburguesa */
+.navbar-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    background: none;
+    border: none;
+}
+
+.navbar-toggle-icon {
+    width: 25px;
+    height: 3px;
+    background-color: rgb(0, 0, 0);
+    margin: 3px 0;
+}
+
+/* Mostrar el botón hamburguesa y ocultar el menú en pantallas pequeñas */
+@media (max-width: 768px) {
+    .navbar-center {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: #FF8514;
+        position: absolute;
+        top: 60px; /* Ajusta según la altura de tu navbar */
+        left: 0;
+        box-shadow: 0px 2px 5px rgba(0,0,0,0.3);
+    }
+
+    .navbar-center.active {
+        display: flex;
+    }
+
+    .navbar-toggle {
+        display: flex;
+    }
+}
+
+
+
+
+
+
+/*LogoPetpal*/
+
+.logopetpaaals {
+    height: 20px; 
 }
 
 .content {
-    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
 }
 
+/* Imagen logo */
+.logopetpal img {
+    width: 250px; /* TAMAÑO FOTO*/
+    height: auto; 
+}
+
+/* Estilo para el nombre PetPals */
+.petpalnombre h1 {
+    text-align: center;
+}
+
+/* Estilo para el texto centrado debajo */
 .centrado {
     text-align: center;
 }
 
-.petpalnombre p {
+/* Ajuste para el texto h3 */
+.centrado h3 {
     text-align: center;
-    color: #FF8514;
-    font-size: 80px;
 }
 
-.centrado p{
-    color: #FF8514;
-    font-size: 30px;
-}
 
+
+
+
+
+
+
+/* Texto nuestros servicios */
 .nuestroservicios {
     font-size: 30px;
     padding-left: 60px;
@@ -107,53 +219,178 @@ p {
     padding-left: 60px;
 }
 
-.petpalnombre p, .centrado p {
-    margin: 0; 
-}
 
-.nuestroservicios h2, .nuestroserviciostexto p {
-    margin: 0; 
-}
+
+
 
 
 /* Servicios en el home */
 .container {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+}
+
+/*Animacion hover */
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
 }
 
 .card {
-    overflow: hidden;
-    width: 150px;
-    height: 200px;
+    width: 200px; /* Ancho de las tarjetas */
+    height: auto; 
     text-align: center;
-    margin-bottom: 100px ;
-    margin-left: 100px ;
-    padding-left: 60px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 15px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
 }
 
 .card img {
     width: 100%;
-    height: 100px;
+    height: 120px; /* TAMAÑO IMAGEN */
     object-fit: contain;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 10px;
 }
 
-.card h3 {
-    margin: 10px 0 5px;
-    font-size: 1em;
-    color: #333;
+.textcard h3 {
+    font-size: 18px; 
+    margin-bottom: 10px;
 }
 
 .card p {
-    margin: 0;
-    font-size: 0.9em;
-    color: #777;
+    font-size: 14px; 
+    line-height: 1.4; 
+    color: #555;
 }
 
-.textcard  h3{
-    color: #FF8514;
+.card:hover {
+    background-color: rgb(248, 227, 189);
 }
 
+
+
+
+
+
+
+
+
+
+
+/*SERVICIOS*/
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    width: 220px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.modal {
+    display: none; 
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 500px;
+    border-radius: 10px;
+    position: relative;
+}
+
+.close {
+    color: #aaa;
+    position: absolute;
+    top: 10px;
+    right: 25px;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #555;
+}
+
+input[type="date"],
+input[type="time"],
+input[type="text"] {
+    width: calc(100% - 10px);
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.btn-submit {
+    background-color: #FF8514;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.btn-submit:hover {
+    background-color: #ffcc66;
+}
+
+
+
+
+
+
+
+
+
+/*Rectangulo info*/
 .rectangulo {
     width: 100%;
     background-color: #FEEDE3;
@@ -161,9 +398,52 @@ p {
     justify-content: center;
     align-items: center;
     height: 150px; 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.centrado-texto {
+    text-align: center;
+    font-size: 24px;
+    color: #FF932F;
 }
 
 
+
+
+
+
+
+
+/*GALERIA*/
+.galeria {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.elemento-galeria img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+/*Animacion*/
+.elemento-galeria img:hover {
+    transform: scale(1.05);
+}
+
+
+
+
+
+
+
+
+/*Rectangulo info2*/
 .rectangulo2 {
     width: 100%;
     background-color: #FF932F;
@@ -175,143 +455,18 @@ p {
 }
 
 
-.centrado-texto {
-    text-align: center;
-    font-size: 24px;
-    color: #FF932F;
-}
-
-
 .centrado-texto2 {
     text-align: center;
     font-size: 24px;
     color: #fffefd;
 }
 
-/*Botones de descarga*/
 
-.izquierda {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    margin-left: 20px;
-}
 
-.right {
-    margin-right: 20px;
-}
 
-button {
-    display: block;
-    width: 200px;
-    padding: 10px;
-    margin: 10px 0;
-    font-size: 16px;
-    cursor: pointer;
-    border: none;
-    border-radius: 5px;
-}
-.app-store {
-    background-color: #FF932F;
-    color: white;
-}
 
-.google-play {
-    background-color: #FF932F;
-    color: white;
-}
 
-img {
-    max-width: 400px;
-    height: auto;
-}
 
-/*Footer*/
-
-footer {
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    color: rgb(0, 0, 0);
-    padding: 20px;
-}
-
-.footer-box {
-    display: flex;
-    align-items: center;
-}
-
-.footer-box img {
-    width: 50px; /* tam,a;o imagen */
-    margin-right: 10px;
-}
-
-.footer-box p {
-    margin: 0;
-    font-size: 16px;
-}
- 
-  .texto1, .texto2 {
-    width: 50%; 
-  }
- 
-  /*serivcios*/
-  
-  .nuestroservicios2{
-    font-size: 40px;
-    padding-left: 60px;
-  }
-
-  /*CONTACTANOS*/
-
-  .fomucontacto{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-  }
-
-  form {
-    border: 1px solid #ccc;
-    padding: 20px;
-    border-radius: 5px;
-    max-width: 400px;
-    width: 100%;
-}
-
-form div {
-    margin-bottom: 15px;
-}
-
-label {
-    display: block;
-    margin-bottom: 5px;
-}
-
-input[type="text"],
-input[type="email"],
-input[type="tel"],
-textarea {
-    width: calc(100% - 10px);
-    padding: 5px;
-    box-sizing: border-box;
-}
-
-button {
-    display: block;
-    width: 100%;
-    padding: 10px;
-    background-color: #FF932F;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-button:hover {
-    background-color: #ffcc66;
-}
 
 /*TURNOS*/
 
@@ -334,78 +489,281 @@ button:hover {
 }
 
 
-/*FORMULARIO DE REGISTRARSE*/
 
-.formulario {
+/* Estilos para el nuevo modal */
+.modal-turno {
+    display: none; 
+    position: fixed; 
+    z-index: 1; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    background-color: rgba(0, 0, 0, 0.5); 
+}
+
+.modal-turno-contenido {
+    background-color: white;
+    margin: 15% auto;
+    padding: 20px;
+    border-radius: 8px;
+    width: 80%;
+    max-width: 400px; 
+}
+
+.cerrar-turno {
+    color: red;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.cerrar-turno:hover,
+.cerrar-turno:focus {
+    color: darkred;
+}
+
+
+
+
+
+/*CONTACTO*/
+
+.fomucontacto{
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100%;
-}
+  }
 
-form {
+  form {
     border: 1px solid #ccc;
     padding: 20px;
     border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    background-color: #fff;
-    max-width: 500px;
+    max-width: 400px;
     width: 100%;
 }
 
-form label {
+.texto-contacto{
+    text-align: center;
+}
+
+form div {
+    margin-bottom: 15px;
+}
+
+label {
     display: block;
     margin-bottom: 5px;
 }
 
-form input[type="text"],
-form input[type="email"],
-form input[type="password"],
-form input[type="date"] {
-    width: calc(100% - 20px); 
-    padding: 8px;
-    margin-bottom: 15px;
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea {
+    width: calc(100% - 10px);
+    padding: 5px;
     box-sizing: border-box;
 }
 
-form p {
+.boton-contacto {
+    background-color: #FF8514; 
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.boton-contacto:hover {
+    background-color: rgb(247, 190, 117); 
+}
+
+.fomucontacto form div:last-child {
+    text-align: center; /* Centra boton de enviar */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/*Estilo inicio sesion*/
+
+.formuiniciosesion {
+    padding: 25px;
+    padding-right: 100px;
+    border-radius: 10px;
+    width: 320px;
+    margin: 30px auto;
+}
+
+.grupo-login-unico {
     margin-bottom: 15px;
 }
 
-.enviarboton {
-    text-align: center;
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #555;
 }
 
-button {
-    padding: 10px 20px;
-    color: white;
-    border: none;
+input[type="text"], 
+input[type="email"],
+input[type="text"],
+input[type="tel"],
+input[type="password"] {
+    width: calc(100% - 10px);
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
     border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.btn-login-unico {
+    width: 100%;
+    padding: 12px;
+    background-color: #FF8514;
+    border: none;
+    color: white;
+    font-size: 16px;
     cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.btn-login-unico:hover {
+    background-color: #ffcc66;
+}
+
+a {
+    color: #FF8514;
+    text-decoration: none;
+    font-size: 14px;
+    display: block;
+    text-align: center;
+    margin-top: 10px;
+}
+
+a:hover {
+    text-decoration: underline;
 }
 
 
-/*FORMULARIO INICIO SESION*/
 
-#Fomrulario{
-    width: 300px;
-    height: 200px;
-    margin: auto;
-    padding: 15px;
+
+
+
+
+
+
+
+
+
+
+/*Estilo formulartio registrarse*/
+
+.formu-registro {
+    padding: 25px;
+    padding-right: 100px;
+    border-radius: 10px;
+    width: 320px;
+    margin: 30px auto;
 }
-label{
-    width: 200px;
-    display: inline-block;
+
+.btn-registrar-unico {
+    width: 100%;
+    padding: 12px;
+    background-color: #FF8514;
+    border: none;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease-in-out;
 }
-input{
-    width: 200px;
-    display: inline-block;
+
+.btn-registrar-unico:hover {
+    background-color: #ffcc66;
 }
-button{
-    width: 200px;
-    display: inline-block;
+
+
+
+
+
+
+
+
+/*CIRCULO QUE CARGA*/
+
+#loader {
+    border: 16px solid #ffcc66;
+    border-radius: 50%;
+    border-top: 16px solid #FF8514;
+    width: 120px;
+    height: 120px;
+    animation: spin 1s linear infinite; 
 }
-#errorNombre,#errorContraseña{
-    color: red;
-    visibility: hidden;
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
 }
+
+#loaderContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(255, 255, 255, 0.3); 
+    z-index: 1000; 
+}
+
+
+
+
+
+
+/*FOOTER*/
+
+footer {
+    padding: 20px;
+}
+
+.footer-box {
+    display: flex;
+    align-items: center;
+}
+
+.footer-box img {
+    width: 50px; /* tama;o imagen */
+    margin-right: 10px;
+}
+
+.footer-box p {
+    margin: 0;
+    font-size: 16px;
+}
+ 
+  .texto1, .texto2 {
+    width: 50%; 
+  }
