@@ -1,0 +1,9 @@
+{
+    "nombre": "valor-del-nombre",
+    "apellido": "valor-del-apellido",
+    "nacimiento": "valor-del-nacimiento",
+    "localidad": "valor-de-la-localidad",
+    "email": "valor-del-email",
+    "contrasena": "valor-de-la-contrasena",
+    "confirmarContrasena": "valor-de-confirmar-contrasena"
+  }
