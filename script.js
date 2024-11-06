@@ -159,4 +159,33 @@ document.querySelector('.formu-registro-mascota').addEventListener('submit', fun
     }
 });
 
+function enviarDatos(nombre, email, mensaje, telefono) {
+    const nombreEncoded = encodeURIComponent(nombre);
+    const emailEncoded = encodeURIComponent(email); 
+    const mensajeEncoded = encodeURIComponent(mensaje);
+    const telefonoEncoded = encodeURIComponent(telefono);
+
+
+    const url = `https://magicloops.dev/api/loop/run/ed3f8823-d634-4d16-ab2c-9c4d19cbc4a8?telefono=${telefonoEncoded}&email=${emailEncoded}&nombre=${nombreEncoded}&mensaje=${mensajeEncoded}`;
+
+    fetch(url, {
+        mode: 'no-cors' // Modo no-cors, permite hacer la solicitud pero no obtener datos de la respuesta
+    })
+    .then(() => {
+        console.log('Solicitud realizada, pero la respuesta no se puede leer debido a las restricciones de CORS.');
+    })
+    .catch(error => {
+        console.error('Error:', error);
+    });
+}
+function enviarCorreo(){
+
+    enviarDatos(
+        document.getElementById('nombre').value,
+         document.getElementById('email').value,
+         document.getElementById('mensaje').value,
+         document.getElementById('telefono').value,
+    );
+}
+
 
