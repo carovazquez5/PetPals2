@@ -125,6 +125,25 @@ body.darkmode{
 }
 
 
+
+
+
+/* Estilos botón de modo oscuro */
+.btn-darkmode {
+    background-color: #555; 
+    color: white; 
+    padding: 8px 12px; /* Reduce el padding para hacerlo más pequeño */
+    font-size: 14px; /* Reduce el tamaño de la fuente */
+}
+
+.btn-darkmode:hover {
+    background-color: #777; 
+}
+
+
+
+
+
 /* Estilos para el botón hamburguesa */
 .navbar-toggle {
     display: none;

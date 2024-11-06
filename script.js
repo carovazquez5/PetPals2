@@ -122,7 +122,7 @@ document.querySelector('.formu-registro form').addEventListener('submit', functi
 
 
 // Manejar el formulario de registro de la mascota
-document.querySelector('.formu-registro form').addEventListener('submit', function(event) {
+document.querySelector('.formu-registro-mascota').addEventListener('submit', function(event) {
     event.preventDefault();
 
     const emailDuenio = localStorage.getItem('emailDuenio');
@@ -137,10 +137,26 @@ document.querySelector('.formu-registro form').addEventListener('submit', functi
         };
 
         const formDataJSON = JSON.stringify(formData);
+        let req = new XMLHttpRequest();
 
+        req.onreadystatechange = () => {
+        if (req.readyState == XMLHttpRequest.DONE) {
+            console.log(req.responseText);
+        }
+        };
+
+        req.open("PUT", "https://api.jsonbin.io/v3/b/<BIN_ID>", true);
+        req.setRequestHeader("Content-Type", "application/json");
+        req.setRequestHeader("X-Master-Key", '$2a$10$ZKNKp4kkiMw7Qj.eb9bkgeNIaJZd.2XAjrRFCtuh7QlYX59qM0M/W');
+        req.send('{"sample": "Hello World"}');
+
+
+        
         console.log(formDataJSON);
         this.submit();
     } else {
         console.log("No se encontró el email del dueño.");
     }
 });
+
+
