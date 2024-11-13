@@ -49,38 +49,37 @@
     <div class="nuestroservicios"> 
         <h2> Turnos </h2>
     </div>
-    <p><b><u><a href="#" id="abrirTurnoModal">Click aquí para sacar turno</a></u></b></p>
 
 
-    <div id="turnoNuevoModal" class="modal-turno">
-        <div class="modal-turno-contenido">
-            <span class="cerrar-turno">&times;</span> 
-            <h2>Solicitar Turno</h2>
-            <form id="nuevoTurnoForm">
-                <div>
-                    <label for="nuevo-dia">Día:</label>
-                    <input type="date" id="nuevo-dia" name="nuevo-dia" required>
-                </div>
-                <div>
-                    <label for="nuevo-hora">Hora:</label>
-                    <input type="time" id="nuevo-hora" name="nuevo-hora" required>
-                </div>
-                <div>
-                    <label for="nuevo-localidad">Localidad:</label>
-                    <input type="text" id="nuevo-localidad" name="nuevo-localidad" placeholder="Ingrese la localidad" required>
-                </div>
-                <button type="submit" class="btn-turno">Solicitar Turno</button>
-            </form>
-        </div>
+
+
+
+
+
+
+    <div class="text-container" onclick="showModal()">
+        <span class="text-left"><b>Turno para el 17/05/2024</b></span>
+        <span class="spacer"></span>
+        <span class="text-right"><b>En proceso</b></span>
     </div>
     
-    <div class="text-container">
-        <span class="text-left"> <b>Turno para el 17/05/2024</b></span>
-        <span class="spacer"></span>
-        <span class="text-right"> <b>En proceso</b></span>
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <p><b>Turno para el 17/05/2024 a las 18:30HS</b></p>
+            <button onclick="editAppointment()">Editar</button>
+            <button onclick="cancelAppointment()">Cancelar turno</button>
+        </div>
     </div>
 
 
+
+
+
+
+
+
+    
     <br>
     <br>
 

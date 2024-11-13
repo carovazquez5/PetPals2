@@ -159,4 +159,66 @@ document.querySelector('.formu-registro-mascota').addEventListener('submit', fun
     }
 });
 
+function enviarDatos(nombre, email, mensaje, telefono) {
+    const nombreEncoded = encodeURIComponent(nombre);
+    const emailEncoded = encodeURIComponent(email); 
+    const mensajeEncoded = encodeURIComponent(mensaje);
+    const telefonoEncoded = encodeURIComponent(telefono);
 
+
+    const url = `https://magicloops.dev/api/loop/run/ed3f8823-d634-4d16-ab2c-9c4d19cbc4a8?telefono=${telefonoEncoded}&email=${emailEncoded}&nombre=${nombreEncoded}&mensaje=${mensajeEncoded}`;
+
+    fetch(url, {
+        mode: 'no-cors' // Modo no-cors, permite hacer la solicitud pero no obtener datos de la respuesta
+    })
+    .then(() => {
+        console.log('Solicitud realizada, pero la respuesta no se puede leer debido a las restricciones de CORS.');
+    })
+    .catch(error => {
+        console.error('Error:', error);
+    });
+}
+function enviarCorreo(){
+
+    enviarDatos(
+        document.getElementById('nombre').value,
+         document.getElementById('email').value,
+         document.getElementById('mensaje').value,
+         document.getElementById('telefono').value,
+    );
+}
+
+
+
+
+
+
+
+
+
+
+function showModal() {
+    document.getElementById("modal").style.display = "block";
+}
+
+function closeModal() {
+    document.getElementById("modal").style.display = "none";
+}
+
+function editAppointment() {
+    alert("Editar turno");
+    // Aquí puedes agregar la lógica para editar el turno
+}
+
+function cancelAppointment() {
+    alert("Cancelar turno");
+    // Aquí puedes agregar la lógica para cancelar el turno
+}
+
+// Cerrar el modal si se hace clic fuera de él
+window.onclick = function(event) {
+    const modal = document.getElementById("modal");
+    if (event.target == modal) {
+        closeModal();
+    }
+}
